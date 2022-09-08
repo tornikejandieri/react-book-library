@@ -10,8 +10,8 @@ const NavBar = () => {
   return ( 
     <div className="nav-bar">
       <ul>
-        <Link style={linkStyles}>Home</Link>
-        <Link style={linkStyles}>Book List</Link>
+        <Link to={'/'} style={linkStyles}>Home</Link>
+        <Link to={'/booklist'} style={linkStyles}>Book List</Link>
         <Link style={linkStyles}>Add A Book</Link>
       </ul>
     </div>

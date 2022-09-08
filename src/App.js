@@ -4,9 +4,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import BookBody from "./BookBody";
 import BookList from "./BookList";
 import Home from "./Home";
-import Library from "./Library";
 import NavBar from "./NavBar";
 
 function App() {
@@ -17,11 +17,11 @@ function App() {
       <Route exact path='/'>
         <Home />
       </Route>
-      <Route path='/booklist'>
+      <Route exact path='/booklist'>
         <BookList />
       </Route>
-      <Route path='/library'>
-        <Library />
+      <Route path='/bookbody'>
+        <BookBody />
       </Route>
     </Switch>
    </Router>
