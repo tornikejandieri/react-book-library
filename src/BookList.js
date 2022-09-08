@@ -1,19 +1,15 @@
 
-import Library from "./Library";
+import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
 
 const BookList = () => {
-
-  const { data: books} = useFetch()
+  const { id } = useParams()
+  const { data: books} = useFetch('http://localhost:8000/books' + id)
 
   return ( 
     <div className="book-list">
-       {books.map(book => (
-        <div className="book" key={book.id}>
-          <h2>{book.title}</h2>
-        </div>
-       ))}
+       {console.log(books)}
     </div>
    );
 }

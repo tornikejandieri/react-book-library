@@ -1,16 +1,27 @@
 import { useEffect, useState } from "react"
-import BookList from "./BookList"
 
-const useFetch = () => {
+
+export const useFetch = (url) => {
   const [books, setBooks] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:8000/books')
-    .then(resp => resp.json())
-    .then(data => setBooks(data))
+    fetch(url)
+    .then((res) => res.json())
+    .then((data) => setBooks(data))
    
-    // return books
-  },[])
+    
+  }, [url])
+
+  return (
+    <>
+      {books && books.map((item) => (
+        <div key={item.id}>
+          <h2>{item.title}</h2>
+          <p>{item.author}</p>
+        </div>
+      ))}
+    </>
+  ) 
 }
 
 export default useFetch;
