@@ -4,7 +4,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import BookBody from "./BookBody";
+
 import BookList from "./BookList";
 import Home from "./Home";
 import NavBar from "./NavBar";
@@ -20,9 +20,7 @@ function App() {
       <Route exact path='/booklist'>
         <BookList />
       </Route>
-      <Route path='/bookbody'>
-        <BookBody />
-      </Route>
+      
     </Switch>
    </Router>
   );

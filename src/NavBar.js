@@ -7,6 +7,7 @@ const NavBar = () => {
     paddingLeft: '20px',
     paddingRight: '20px'
   }
+  
   return ( 
     <div className="nav-bar">
       <ul>

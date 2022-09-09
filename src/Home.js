@@ -3,6 +3,7 @@ import BookPic from '../src/images/books.png'
 
 const Home = () => {
   const history = useHistory()
+  
   return ( 
     <div className="home">
       <div className="button-center">
